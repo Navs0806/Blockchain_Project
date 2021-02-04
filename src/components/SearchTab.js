@@ -77,7 +77,7 @@ export class SearchTab extends Component{
     })).then((results)=>{
       var data = [].concat.apply(this.state.folders,results.map((fs,pid)=>{
         return fs.map((f)=>({
-          id: -1,//gives some weird bug without this fk it
+          id: -1,
           parentId: pid,
           type: 'File',
           name:f.name,
